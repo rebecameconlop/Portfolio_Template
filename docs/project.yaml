@@ -1,10 +1,10 @@
-# Project metadata - Completed for Week 4
+# Project metadata - Rebeca Melcón López
 # This file will be used to generate your entry in the course showroom
 
 # Basic information
-handle: rebecameconlop # Sustituye por tu usuario de GitHub
-name: Rebeca Melcón López # Tu nombre real
-email: rebeca.designer@udit.es # Tu email de estudiante
+handle: rebecameconlop
+name: Rebeca Melcón López
+email: rebecameconlop@gmail.com
 
 # URLs
 github_url: https://github.com/rebecameconlop
@@ -13,8 +13,8 @@ repository_url: https://github.com/rebecameconlop/Portfolio_Template
 
 # Project details
 title:
-  es: Aurion Portfolio - Experiencias Inmersivas con GSAP
-  en: Aurion Portfolio - Immersive GSAP Experiences
+  es: Rebeca Melcón - Portfolio
+  en: Rebeca Melcón - Portfolio
 
 abstract:
   es: |
@@ -37,7 +37,7 @@ tags:
   - bootstrap5
   - ui-ux-design
 
-# Learning objectives you're focusing on
+# Learning objectives
 learning_focus:
   - semantic-html
   - mobile-first-design
@@ -45,12 +45,11 @@ learning_focus:
   - advanced-css-customization
   - javascript-animation-engines
 
-# Week tracking (Update: All completed)
+# Week tracking (All completed)
 milestones:
   week_1_setup: true
   week_2_brief: true
   week_4_metadata: true
   week_5_showcase: true
 
-# Optional: link to your project brief
 brief_url: docs/project-brief.md

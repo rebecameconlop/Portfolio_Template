@@ -1,4 +1,4 @@
-# Plan de Trabajo - Proyecto Portfolio Aurion
+# Plan de Trabajo - Proyecto Portfolio Rebeca
 
 Este documento detalla la planificación y el proceso de ejecución seguido para el desarrollo de la plataforma, dividida en cinco fases críticas de ingeniería web.
 

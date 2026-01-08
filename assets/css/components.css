@@ -11,7 +11,7 @@
   text-decoration: none;
 }
 
-/* --- MANTENEMOS LAS OTRAS CÁPSULAS --- */
+/* --- CÁPSULAS --- */
 .nav-pill-container,
 .nav-capsule-btn {
   height: 45px;
@@ -31,7 +31,7 @@
   font-size: 0.85rem !important;
 }
 
-/* --- BOTÓN HAMBURGUESA MINIMALISTA --- */
+/* --- BOTÓN HAMBURGUESA --- */
 .custom-toggler {
   border: none !important;
   display: flex;
@@ -186,6 +186,16 @@
 }
 
 /* --- ESTILO PÁGINA 404 (SIN DEGRADADOS) --- */
+#error-page {
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgb(125, 212, 252),
+      transparent 60%
+    ),
+    radial-gradient(circle at 80% 30%, rgb(56, 191, 248), transparent 55%),
+    radial-gradient(circle at 50% 80%, rgb(0, 0, 0), transparent 60%);
+}
+
 .error-card {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(40px);
@@ -195,7 +205,7 @@
   padding: 80px 40px;
   max-width: 650px;
   z-index: 2;
-  color: #ffffff !important; /* Todo el texto dentro será blanco */
+  color: #ffffff !important;
 }
 
 .error-code {
@@ -205,18 +215,12 @@
   color: #ffffff !important; /* Blanco sólido, sin degradado */
   letter-spacing: -4px;
   line-height: 1;
-  /* Quitamos cualquier rastro de background-clip anterior */
   background: none !important;
   -webkit-text-fill-color: initial !important;
 }
 
 .hero-subtitle.text-white {
-  color: rgba(
-    255,
-    255,
-    255,
-    0.7
-  ) !important; /* Un blanco un poco más suave para el texto secundario */
+  color: rgba(255, 255, 255, 0.7) !important;
   margin-bottom: 30px;
 }
 

@@ -1,9 +1,9 @@
 # Project Brief
 
-_Student:_ Rebeca Designer
-_Handle:_ @[tu-usuario-de-github]
+_Student:_ Rebeca Melcón López
+_Handle:_ @rebecameconlop
 _Course:_ Web Design 2025 · Fall
-_Date:_ Enero 2025 - Week 2
+_Date:_ Enero 2026 - Week 2
 
 ---
 

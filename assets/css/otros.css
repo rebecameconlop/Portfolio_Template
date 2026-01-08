@@ -99,7 +99,7 @@ body {
 
 .hero {
   position: relative;
-  background-color: #05070c; /* Fondo base oscuro */
+  background-color: #05070c;
   overflow: hidden;
   z-index: 1;
 }
@@ -109,10 +109,9 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  /* IMPORTANTE: 130% de altura para que el degradado tenga margen de movimiento */
   height: 130%;
 
-  /* Aquí definimos tu degradado azul/aurora */
+  /* Degradado azul/aurora */
   background: radial-gradient(
       circle at 20% 20%,
       rgb(125, 212, 252),
@@ -121,11 +120,10 @@ body {
     radial-gradient(circle at 80% 30%, rgb(56, 191, 248), transparent 55%),
     radial-gradient(circle at 50% 80%, rgb(0, 0, 0), transparent 60%);
 
-  /* Un blur suave para que los colores se mezclen bien */
   filter: blur(60px);
   opacity: 0.8;
   z-index: -1;
-  will-change: transform; /* Optimiza el rendimiento de la animación */
+  will-change: transform;
 }
 
 .hero-title {
@@ -137,59 +135,19 @@ body {
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-weight: 400;
-  /* Un ligero ajuste de color o brillo si lo deseas */
   color: rgba(255, 255, 255, 0.95);
-  /* Un toque de elegancia extra */
   text-transform: none;
 }
 
 /* Ajuste general del h1 para que la transición sea suave */
 .hero-title {
-  font-family: "Inter", sans-serif; /* Tu fuente principal */
+  font-family: "Inter", sans-serif;
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
 
 .hero-subtitle {
   color: var(--text-muted);
-}
-
-/* Scroll indicator */
-.scroll-indicator {
-  z-index: 10;
-}
-
-.mouse {
-  width: 26px;
-  height: 42px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 13px;
-  position: relative;
-}
-
-.mouse::after {
-  content: "";
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 2px;
-  animation: scrollMouse 1.5s ease-in-out infinite;
-}
-
-@keyframes scrollMouse {
-  0%,
-  100% {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-  50% {
-    opacity: 0.3;
-    transform: translateX(-50%) translateY(12px);
-  }
 }
 
 /* --------------------------------------------------------------------------

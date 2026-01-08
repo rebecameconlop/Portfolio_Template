@@ -38,6 +38,6 @@ Referencia para la implementación de formularios elegantes y componentes de usu
 
 ### Project Core Concept
 
-**Aurion** es un ecosistema visual diseñado para desarrolladores y creativos que buscan una presencia digital sofisticada. El concepto central es la **"Transparencia Técnica"**: utilizar elementos visuales cristalinos para mostrar un código limpio y una estructura organizada.
+**Rebeca Portfolio** es un ecosistema visual diseñado para desarrolladores y creativos que buscan una presencia digital sofisticada. El concepto central es la **"Transparencia Técnica"**: utilizar elementos visuales cristalinos para mostrar un código limpio y una estructura organizada.
 
 No es solo un portfolio, sino una herramienta de branding personal que equilibra la potencia de un framework robusto (Bootstrap) con la delicadeza de animaciones cinemáticas (GSAP), eliminando cualquier ruido visual para centrarse en la calidad del trabajo expuesto.
