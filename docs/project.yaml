@@ -1,0 +1,56 @@
+# Project metadata - Completed for Week 4
+# This file will be used to generate your entry in the course showroom
+
+# Basic information
+handle: rebecameconlop # Sustituye por tu usuario de GitHub
+name: Rebeca Melcón López # Tu nombre real
+email: rebeca.designer@udit.es # Tu email de estudiante
+
+# URLs
+github_url: https://github.com/rebecameconlop
+project_url: https://rebecameconlop.github.io/Portfolio_Template
+repository_url: https://github.com/rebecameconlop/Portfolio_Template
+
+# Project details
+title:
+  es: Aurion Portfolio - Experiencias Inmersivas con GSAP
+  en: Aurion Portfolio - Immersive GSAP Experiences
+
+abstract:
+  es: |
+    Portfolio profesional de alto impacto visual diseñado bajo la estética Glassmorphism. 
+    Construido para perfiles creativos, destaca por el uso avanzado de GSAP para 
+    micro-interacciones y Bootstrap 5 para una estructura robusta y responsive.
+  en: |
+    High-impact professional portfolio designed with a Glassmorphism aesthetic. 
+    Built for creative profiles, it features advanced GSAP usage for micro-interactions 
+    and Bootstrap 5 for a robust, responsive structure.
+
+# Technical tags
+tags:
+  - html5
+  - css3
+  - responsive-design
+  - accessibility
+  - javascript
+  - gsap-animations
+  - bootstrap5
+  - ui-ux-design
+
+# Learning objectives you're focusing on
+learning_focus:
+  - semantic-html
+  - mobile-first-design
+  - web-accessibility
+  - advanced-css-customization
+  - javascript-animation-engines
+
+# Week tracking (Update: All completed)
+milestones:
+  week_1_setup: true
+  week_2_brief: true
+  week_4_metadata: true
+  week_5_showcase: true
+
+# Optional: link to your project brief
+brief_url: docs/project-brief.md

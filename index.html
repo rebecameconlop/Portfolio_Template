@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grade 2 Demo: Bootstrap + GSAP Scroll</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/otros.css" />
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container nav-header-wrapper">
+        <a class="navbar-brand logo-clean" href="#">Portfolio</a>
+
+        <button
+          class="navbar-toggler custom-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="toggler-icon"></span>
+          <span class="toggler-icon"></span>
+          <span class="toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <div class="nav-pill-container">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#features">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pricing">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="d-none d-lg-block">
+          <a href="#trial" class="btn btn-nav-saas nav-capsule-btn"
+            >Contratar</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section
+        id="hero"
+        class="hero min-vh-100 d-flex align-items-center position-relative overflow-hidden"
+      >
+        <!-- Parallax Background -->
+        <div class="hero-bg position-absolute w-100 h-100"></div>
+
+        <!-- Floating shapes (GSAP animated) -->
+        <div class="floating-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+        </div>
+
+        <div class="container position-relative z-1 text-center text-white">
+          <h1 class="display-1 fw-bold hero-title">
+            Rebeca <span class="highlight-serif">Designer</span>
+          </h1>
+          <p class="lead hero-subtitle mb-4">
+            Full-Stack Developer & Creative Technologist
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary btn-lg me-3"
+              >View Projects</a
+            >
+            <a href="#contact" class="btn btn-outline-light btn-lg"
+              >Get in Touch</a
+            >
+          </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div
+          class="scroll-indicator position-absolute bottom-0 start-50 translate-middle-x mb-4"
+        >
+          <div class="mouse"></div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="py-5 py-lg-6 bg-dark">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <div class="about-image gsap-reveal">
+                <img
+                  src="https://picsum.photos/600/700?random=10"
+                  alt="Profile"
+                  class="img-fluid rounded-4 shadow-lg"
+                />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h2 class="display-5 fw-bold mb-4 gsap-reveal">About Me</h2>
+              <p class="lead text-muted mb-4 gsap-reveal">
+                I'm a creative developer passionate about building beautiful,
+                functional, and accessible digital experiences.
+              </p>
+              <p class="text-muted gsap-reveal">
+                With 7+ years of experience spanning front-end development,
+                UI/UX design, and motion graphics, I bring a unique perspective
+                to every project. I believe in the power of animation to enhance
+                user experience without sacrificing performance.
+              </p>
+
+              <!-- Skills with animated progress -->
+              <div class="skills mt-5">
+                <div class="skill-item gsap-reveal mb-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="fw-semibold">React / Next.js</span>
+                    <span class="text-muted">95%</span>
+                  </div>
+                  <div class="progress" style="height: 8px">
+                    <div class="progress-bar skill-bar" data-width="95"></div>
+                  </div>
+                </div>
+                <div class="skill-item gsap-reveal mb-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="fw-semibold">GSAP / Animation</span>
+                    <span class="text-muted">90%</span>
+                  </div>
+                  <div class="progress" style="height: 8px">
+                    <div class="progress-bar skill-bar" data-width="90"></div>
+                  </div>
+                </div>
+                <div class="skill-item gsap-reveal mb-3">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="fw-semibold">Node.js / Express</span>
+                    <span class="text-muted">85%</span>
+                  </div>
+                  <div class="progress" style="height: 8px">
+                    <div class="progress-bar skill-bar" data-width="85"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="py-5 py-lg-6">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold gsap-reveal">Featured Projects</h2>
+            <p class="lead text-muted gsap-reveal">
+              A selection of my recent work
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <!-- Project Card 1 -->
+            <div class="col-md-6 col-lg-4">
+              <article class="card project-card h-100 border-0 shadow-sm">
+                <div class="card-img-wrapper overflow-hidden">
+                  <img
+                    src="https://picsum.photos/400/300?random=1"
+                    class="card-img-top"
+                    alt="E-commerce Platform"
+                  />
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title h5">E-commerce Platform</h3>
+                  <p class="card-text text-muted small">
+                    Full-stack e-commerce solution with real-time inventory and
+                    Stripe integration.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-primary-subtle text-primary"
+                      >React</span
+                    >
+                    <span class="badge bg-primary-subtle text-primary"
+                      >Node.js</span
+                    >
+                    <span class="badge bg-primary-subtle text-primary"
+                      >MongoDB</span
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="col-md-6 col-lg-4">
+              <article class="card project-card h-100 border-0 shadow-sm">
+                <div class="card-img-wrapper overflow-hidden">
+                  <img
+                    src="https://picsum.photos/400/300?random=2"
+                    class="card-img-top"
+                    alt="Dashboard UI"
+                  />
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title h5">Analytics Dashboard</h3>
+                  <p class="card-text text-muted small">
+                    Real-time data visualization with interactive charts and
+                    dark mode.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-primary-subtle text-primary"
+                      >D3.js</span
+                    >
+                    <span class="badge bg-primary-subtle text-primary"
+                      >WebSocket</span
+                    >
+                    <span class="badge bg-primary-subtle text-primary"
+                      >GSAP</span
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="col-md-6 col-lg-4">
+              <article class="card project-card h-100 border-0 shadow-sm">
+                <div class="card-img-wrapper overflow-hidden">
+                  <img
+                    src="https://picsum.photos/400/300?random=3"
+                    class="card-img-top"
+                    alt="Mobile App"
+                  />
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title h5">Fitness Mobile App</h3>
+                  <p class="card-text text-muted small">
+                    Cross-platform fitness tracker with workout plans and
+                    progress analytics.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-primary-subtle text-primary"
+                      >React Native</span
+                    >
+                    <span class="badge bg-primary-subtle text-primary"
+                      >Firebase</span
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Project Card 4 -->
+            <div class="col-md-6 col-lg-4">
+              <article class="card project-card h-100 border-0 shadow-sm">
+                <div class="card-img-wrapper overflow-hidden">
+                  <img
+                    src="https://picsum.photos/400/300?random=4"
+                    class="card-img-top"
+                    alt="Portfolio Site"
+                  />
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title h5">Agency Website</h3>
+                  <p class="card-text text-muted small">
+                    Award-winning agency site with scroll-driven animations and
+                    3D elements.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-primary-subtle text-primary"
+                      >Three.js</span
+                    >
+                    <span class="badge bg-primary-subtle text-primary"
+                      >GSAP</span
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Project Card 5 -->
+            <div class="col-md-6 col-lg-4">
+              <article class="card project-card h-100 border-0 shadow-sm">
+                <div class="card-img-wrapper overflow-hidden">
+                  <img
+                    src="https://picsum.photos/400/300?random=5"
+                    class="card-img-top"
+                    alt="SaaS Platform"
+                  />
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title h5">SaaS Platform</h3>
+                  <p class="card-text text-muted small">
+                    Multi-tenant SaaS with role-based access and subscription
+                    management.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-primary-subtle text-primary"
+                      >Next.js</span
+                    >
+                    <span class="badge bg-primary-subtle text-primary"
+                      >Prisma</span
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Project Card 6 -->
+            <div class="col-md-6 col-lg-4">
+              <article class="card project-card h-100 border-0 shadow-sm">
+                <div class="card-img-wrapper overflow-hidden">
+                  <img
+                    src="https://picsum.photos/400/300?random=6"
+                    class="card-img-top"
+                    alt="AI Tool"
+                  />
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title h5">AI Content Generator</h3>
+                  <p class="card-text text-muted small">
+                    GPT-powered content creation tool with custom fine-tuning
+                    options.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-primary-subtle text-primary"
+                      >OpenAI</span
+                    >
+                    <span class="badge bg-primary-subtle text-primary"
+                      >Python</span
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-5 bg-dark">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <div class="project-card p-4 gsap-reveal">
+                <div class="text-center mb-4">
+                  <h2 class="h3 fw-bold">Hablemos</h2>
+                  <p class="text-muted small">¿Tienes una idea? Escríbeme.</p>
+                </div>
+
+                <form id="contact-form" class="row g-3">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control custom-input-sm"
+                      placeholder="Nombre"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control custom-input-sm"
+                      placeholder="Email"
+                      required
+                    />
+                  </div>
+                  <div class="col-12">
+                    <textarea
+                      class="form-control custom-input-sm"
+                      rows="3"
+                      placeholder="Tu mensaje..."
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-nav-saas btn-sm px-4">
+                      Enviar
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center text-muted small">
+      <div class="container">
+        <p class="mb-0">
+          &copy; 2025 John Designer. Built with Bootstrap 5 + GSAP.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- GSAP + Plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/ScrollToPlugin.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

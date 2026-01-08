@@ -1,0 +1,380 @@
+/* ==========================================================================
+   Grade 2 – Bootstrap + GSAP Portfolio Template
+   Aesthetic: Dark / Glassmorphism / AI Studio
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS VARIABLES / DESIGN TOKENS
+   -------------------------------------------------------------------------- */
+:root {
+  /* Base colors */
+  --bg-main: #07090f;
+  --bg-alt: #111111;
+
+  /* Glass */
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-bg-strong: rgba(255, 255, 255, 0.14);
+  --glass-border: rgba(255, 255, 255, 0.22);
+
+  /* Accent */
+  --primary: #7dd3fc;
+  --primary-rgb: 125, 211, 252;
+
+  /* Text */
+  --text-main: #f8fafc;
+  --text-muted: rgba(248, 250, 252, 0.65);
+
+  /* Effects */
+  --blur-xl: 48px;
+  --blur-lg: 28px;
+  --radius-xl: 1.6rem;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* --------------------------------------------------------------------------
+   2. BASE STYLES
+   -------------------------------------------------------------------------- */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+.bg-dark {
+  background-color: var(--bg-alt) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.py-lg-6 {
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. NAVBAR – GLASSMORPHISM
+   -------------------------------------------------------------------------- */
+
+.navbar-brand {
+  color: var(--text-main);
+}
+
+.nav-link {
+  color: var(--text-muted);
+  position: relative;
+  padding: 0.5rem 1rem !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--text-main);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(var(--primary-rgb), 0),
+    rgba(var(--primary-rgb), 1),
+    rgba(var(--primary-rgb), 0)
+  );
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+  left: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. HERO SECTION – BLURRED GRADIENT / AURORA
+   -------------------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  background-color: #05070c; /* Fondo base oscuro */
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* IMPORTANTE: 130% de altura para que el degradado tenga margen de movimiento */
+  height: 130%;
+
+  /* Aquí definimos tu degradado azul/aurora */
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgb(125, 212, 252),
+      transparent 60%
+    ),
+    radial-gradient(circle at 80% 30%, rgb(56, 191, 248), transparent 55%),
+    radial-gradient(circle at 50% 80%, rgb(0, 0, 0), transparent 60%);
+
+  /* Un blur suave para que los colores se mezclen bien */
+  filter: blur(60px);
+  opacity: 0.8;
+  z-index: -1;
+  will-change: transform; /* Optimiza el rendimiento de la animación */
+}
+
+.hero-title {
+  letter-spacing: -0.04em;
+}
+
+/* Estilo para la última palabra resaltada */
+.highlight-serif {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 400;
+  /* Un ligero ajuste de color o brillo si lo deseas */
+  color: rgba(255, 255, 255, 0.95);
+  /* Un toque de elegancia extra */
+  text-transform: none;
+}
+
+/* Ajuste general del h1 para que la transición sea suave */
+.hero-title {
+  font-family: "Inter", sans-serif; /* Tu fuente principal */
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  color: var(--text-muted);
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  z-index: 10;
+}
+
+.mouse {
+  width: 26px;
+  height: 42px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 13px;
+  position: relative;
+}
+
+.mouse::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 2px;
+  animation: scrollMouse 1.5s ease-in-out infinite;
+}
+
+@keyframes scrollMouse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translateX(-50%) translateY(12px);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. ABOUT SECTION
+   -------------------------------------------------------------------------- */
+.about-image {
+  position: relative;
+}
+
+.about-image::before {
+  content: "";
+  position: absolute;
+  inset: 20px -20px -20px 20px;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  z-index: -1;
+}
+
+.about-image img {
+  position: relative;
+  z-index: 1;
+}
+
+/* Skills */
+.progress {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--primary-rgb), 0.7),
+    rgba(var(--primary-rgb), 1)
+  );
+  width: 0; /* animado con GSAP */
+}
+
+/* --------------------------------------------------------------------------
+   6. PROJECT CARDS – GLASSMORPHISM
+   -------------------------------------------------------------------------- */
+.project-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--blur-xl));
+  -webkit-backdrop-filter: blur(var(--blur-xl));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out),
+    background 0.4s var(--ease-out);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+  background: var(--glass-bg-strong);
+}
+
+.card-img-wrapper {
+  aspect-ratio: 4 / 3;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.project-card:hover .card-img-wrapper img {
+  transform: scale(1.08);
+}
+
+.card-body {
+  background: transparent;
+  padding: 1.5rem;
+}
+
+.card-title {
+  color: var(--text-main);
+}
+
+.card-text {
+  color: var(--text-muted);
+}
+
+/* Badges */
+.bg-primary-subtle {
+  background-color: rgba(var(--primary-rgb), 0.18) !important;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+/* --------------------------------------------------------------------------
+   7. BUTTONS – GLASS STYLE
+   -------------------------------------------------------------------------- */
+.btn {
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: rgba(var(--primary-rgb), 0.28);
+  border: 1px solid rgba(var(--primary-rgb), 0.45);
+  color: var(--text-main);
+}
+
+.btn-primary:hover {
+  background: rgba(var(--primary-rgb), 0.45);
+  transform: translateY(-2px);
+}
+
+.btn-outline-light {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-main);
+}
+
+.btn-outline-light:hover {
+  background: var(--glass-bg-strong);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   8. CONTACT / SOCIAL
+   -------------------------------------------------------------------------- */
+.social-links a {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--primary) !important;
+  transform: translateY(-4px);
+}
+
+/* --------------------------------------------------------------------------
+   9. UTILITIES
+   -------------------------------------------------------------------------- */
+.z-1 {
+  z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   10. ACCESSIBILITY – REDUCED MOTION
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   11. RESPONSIVE
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-cta .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .hero-cta .btn:last-child {
+    margin-bottom: 0;
+  }
+
+  .about-image::before {
+    display: none;
+  }
+}

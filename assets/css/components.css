@@ -1,0 +1,231 @@
+/* --- ESTILO LOGO LIMPIO --- */
+.logo-clean {
+  background: transparent !important;
+  border: none !important;
+  backdrop-filter: none !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 1.2rem !important;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* --- MANTENEMOS LAS OTRAS CÁPSULAS --- */
+.nav-pill-container,
+.nav-capsule-btn {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 0 20px !important;
+  border-radius: 50px !important;
+}
+
+.nav-capsule-btn {
+  background: white !important;
+  color: black !important;
+  font-weight: 600;
+  font-size: 0.85rem !important;
+}
+
+/* --- BOTÓN HAMBURGUESA MINIMALISTA --- */
+.custom-toggler {
+  border: none !important;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 10px;
+  box-shadow: none !important;
+}
+
+.toggler-icon {
+  width: 22px;
+  height: 2px;
+  background-color: white;
+  display: block;
+  border-radius: 2px;
+}
+
+/* --- AJUSTES PARA MÓVIL (Responsive) --- */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    /* El menú desplegable flota bajo el nav */
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    padding: 0 15px;
+  }
+
+  .nav-pill-container {
+    height: auto !important; /* Altura automática en móvil */
+    flex-direction: column;
+    padding: 20px !important;
+    border-radius: 20px !important;
+    background: rgba(
+      10,
+      15,
+      25,
+      0.95
+    ) !important; /* Más opaco en móvil para leer mejor */
+    backdrop-filter: blur(20px) !important;
+  }
+
+  .navbar-nav {
+    gap: 15px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 10px 0 !important;
+    font-size: 1.1rem !important;
+  }
+}
+
+/* --- AJUSTE DE ESPACIADO (Captura corregida) --- */
+#contact .mb-5 {
+  margin-bottom: 2rem !important; /* Espacio equilibrado */
+}
+
+/* --- GLASSMORPHISM UNIFICADO (Estilo Menú) --- */
+.project-card,
+.hero-cta .btn,
+#contact .btn,
+.btn-outline-light {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(var(--blur-lg)) !important;
+  -webkit-backdrop-filter: blur(var(--blur-lg)) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: var(--text-main) !important;
+  transition: all 0.4s var(--ease-out) !important;
+  border-radius: var(--radius-xl) !important;
+}
+
+/* Botones: Tamaño elegante */
+.hero-cta .btn,
+#contact .btn {
+  padding: 10px 25px !important;
+  font-size: 1rem !important;
+  border-radius: 50px !important;
+}
+
+/* Hover con brillo primario */
+.project-card:hover,
+.hero-cta .btn:hover,
+#contact .btn:hover {
+  background: var(--glass-bg-strong) !important;
+  border-color: var(--primary) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(var(--primary-rgb), 0.3);
+}
+
+/* Barras de Skills */
+.skill-bar {
+  background: var(--primary) !important;
+  height: 100%;
+  width: 0%; /* Animado por JS */
+  border-radius: 4px;
+}
+
+/* Redes sociales */
+#contact .social-links {
+  gap: 20px !important;
+  margin-top: 1.5rem;
+}
+
+/* --- CONTACTO COMPACTO --- */
+.custom-input-sm {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  border-radius: 10px !important;
+  padding: 8px 12px !important; /* Más pequeño */
+  font-size: 0.85rem !important;
+  transition: all 0.3s ease;
+}
+
+.custom-input-sm:focus {
+  background: rgba(137, 137, 137, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: none !important;
+}
+
+/* Ajuste de la tarjeta para que sea más estilizada */
+#contact .project-card {
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 25px;
+}
+
+/* Personalización de Inputs */
+.custom-input {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  border-radius: 12px !important;
+  padding: 12px 18px !important;
+  transition: all 0.3s ease !important;
+}
+
+.custom-input:focus {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1) !important;
+  outline: none;
+}
+
+.custom-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* --- ESTILO PÁGINA 404 (SIN DEGRADADOS) --- */
+.error-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  padding: 80px 40px;
+  max-width: 650px;
+  z-index: 2;
+  color: #ffffff !important; /* Todo el texto dentro será blanco */
+}
+
+.error-code {
+  font-size: 9rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #ffffff !important; /* Blanco sólido, sin degradado */
+  letter-spacing: -4px;
+  line-height: 1;
+  /* Quitamos cualquier rastro de background-clip anterior */
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+.hero-subtitle.text-white {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ) !important; /* Un blanco un poco más suave para el texto secundario */
+  margin-bottom: 30px;
+}
+
+.btn-hero-dark {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-radius: 50px !important;
+  padding: 12px 40px !important;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}

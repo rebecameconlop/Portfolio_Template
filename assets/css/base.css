@@ -1,0 +1,63 @@
+/* ==========================================================================
+   BASE STYLES - CORE CONFIGURATION
+   ========================================================================== */
+
+/* 1. RESET & BOX MODEL */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. DOCUMENT SETUP */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px; /* Base for REM units */
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* 3. TYPOGRAPHY DEFAULTS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s var(--ease-standard);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 4. SELECTION COLOR */
+::selection {
+  background-color: var(--primary);
+  color: var(--bg-main);
+}
+
+/* 5. SMOOTH SCROLL STOP (For GSAP) */
+body.is-scrolling {
+  pointer-events: none;
+}
