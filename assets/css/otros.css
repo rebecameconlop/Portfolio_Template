@@ -289,14 +289,58 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   9. UTILITIES
+   9. FOOTER
+   -------------------------------------------------------------------------- */
+
+footer {
+  margin-top: 80px;
+  padding: 40px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 0.9rem;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-section button {
+  background: #f0f0f0;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.branding {
+  font-size: 11vw;
+  color: #e0e0e0;
+  text-align: center;
+  font-weight: 100;
+}
+
+/* --------------------------------------------------------------------------
+   10. UTILITIES
    -------------------------------------------------------------------------- */
 .z-1 {
   z-index: 1;
 }
 
 /* --------------------------------------------------------------------------
-   10. ACCESSIBILITY – REDUCED MOTION
+   11. ACCESSIBILITY – REDUCED MOTION
    -------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -309,7 +353,7 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   11. RESPONSIVE
+   12. RESPONSIVE
    -------------------------------------------------------------------------- */
 @media (max-width: 991.98px) {
   .hero-title {
